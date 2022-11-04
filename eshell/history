@@ -2,3 +2,12 @@ ls
 cd ~
 ls 
 pwd 
+ls ll -ls
+ll
+ls
+git add .
+git commit -m 'add dashboard'
+git push -u origin master
+git push
+git add.
+git add .
