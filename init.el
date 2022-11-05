@@ -13,7 +13,7 @@
 
 ;;modeline上显示我的所有的按键和执行的命令
 (package-install 'keycast)
-(keycast-mode t)
+;;(keycast-mode t)
 
 
 ;;设置行号
@@ -40,8 +40,9 @@
 ;;关闭滑动按钮
 (scroll-bar-mode -1)
 ;;设置光标风格和粗细
-(setq cursor-type '(bar . 5))
-
+(setq-default cursor-type '(bar . 5))
+;;括号比对
+(show-paren-mode t)
 
 ;;快速打开配置文件
 (defun open-init-file()
@@ -53,8 +54,8 @@
 
 ;;设置company插件补全
 (global-company-mode 1)
-(setq company-minimum-prefix-length 1)
-(setq company-idle-delay 2)
+(setq company-minimum-prefix-length 3);;最小触发补全的字母数字
+(setq company-idle-delay 0)
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 
@@ -71,11 +72,12 @@
 
 ;;minibuffer action 和自适应的 context menu：Embark
 (package-install 'embark)
-
+(global-set-key (kbd "C-;") 'embark-act)
+(setq prefix-help-command 'embark-prefix-help-command)
 
 ;;增强文件内搜索和跳转函数定义：Consult
 (package-install 'consult)
-
+(global-set-key (kbd "C-s") 'consult-line)
 
 ;; 更改显示字体大小 16pt
 ;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
@@ -87,6 +89,33 @@
 
 ;;高亮当前行
 (global-hl-line-mode 1)
+
+;;打开最近的文件选项
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-item 10)
+
+(global-set-key (kbd "C-x b") 'consult-buffer)
+
+;;(global-set-key (kdb "C-x C-r") 'recentf-open-files)
+
+;;删除光标所在的单词
+(delete-selection-mode 1)
+
+;;查找不同函数，变量以及快捷键所定义的文件位置
+(global-set-key (kbd "C-h C-f") 'find-function);;find-function （ C-h C-f ）
+(global-set-key (kbd "C-h C-v") 'find-variable);;find-variable （ C-h C-v ）
+(global-set-key (kbd "C-h C-k") 'find-function-on-key);;find-function-on-key （ C-h C-k ）
+
+;;网易云音乐
+;; Add it to load path
+(add-to-list 'load-path "~/.emacs.d/elpa/netease-cloud-music-20211002.1453/netease-cloud-music.el")
+
+;; Require it
+(require 'netease-cloud-music)
+(require 'netease-cloud-music-ui)       ;If you want to use the default TUI, you should add this line in your configuration.
+;;(require 'netease-cloud-music-comment)  ;If you want comment feature
+    
 
 ;;启动主题
 ;;(load-theme 'monokai 1)
@@ -125,7 +154,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(neotree markdown-mode solarized-theme monokai-theme dashboard embark marginalia vertico orderless keycast company)))
+   '(mpv netease-cloud-music netease-music emms emms-bilibili flycheck latex-preview-pane latex-extra pdf-tools python-mode neotree markdown-mode solarized-theme monokai-theme dashboard embark marginalia vertico orderless keycast company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
