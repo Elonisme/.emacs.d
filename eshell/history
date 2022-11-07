@@ -17,3 +17,10 @@ ls
 ls
 hello.exe 
 ls
+cd ~
+cd .emacs.d/
+ls
+rm -rf netease-cloud-music/
+ls
+git add .
+git commit -m "transform init.el to init-xxx.el"

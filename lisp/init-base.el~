@@ -1,0 +1,43 @@
+;;设置写文件为utf-8
+(setq default-buffer-file-coding-system 'utf-8)
+
+;;优先读文件为utf-8
+(prefer-coding-system 'utf-8)
+
+;;设置行号
+(global-linum-mode 1)
+
+;;关闭打开软件导航栏
+(setq inhibit-startup-screen t)
+
+;;激活注册表快捷方式
+(server-mode 1)
+
+;;打开icomplete补全功能
+;;(setq tab-always-indent 'complete)
+;;(icomplete-mode t)
+
+;;打开括号不全
+(electric-pair-mode t)
+
+;;打开最大化
+(toggle-frame-maximized)
+
+;;关闭工具窗口
+(tool-bar-mode -1)
+;;关闭滑动按钮
+(scroll-bar-mode -1)
+;;设置光标风格和粗细
+(setq-default cursor-type '(bar . 5))
+;;括号比对
+(show-paren-mode t)
+
+;;快速打开配置文件
+(defun open-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+
+;;将函数open-init-file绑定到<F2>键上
+(global-set-key (kbd "<f2>") 'open-init-file)
+
+(provide 'init-base)
