@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       039a9921-f687-45d2-8890-0ddf07439f78
+:END:
+#+title: english notebook
+* This is my english notebook
+** doing vs. done                                                   :english:

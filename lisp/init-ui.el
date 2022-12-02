@@ -25,9 +25,6 @@
 (load-theme 'solarized-dark t)
 
 ;;开启Dashboard
-;;(require 'dashboard)
-;;(dashboard-setup-startup-hook)
-;; Or if you use use-package
 (use-package dashboard
   :ensure t
   :config
@@ -37,12 +34,7 @@
 ;; Set the title
 (setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
 ;; Set the banner
-(setq dashboard-startup-banner [VALUE])
-;; Value can be
-;; 'official which displays the official emacs logo
-;; 'logo which displays an alternative emacs logo
-;; 1, 2 or 3 which displays one of the text banners
-;; "path/to/your/image.gif", "path/to/your/image.png" or "path/to/your/text.txt" which displays whatever gif/image/text you would prefer
+(setq dashboard-startup-banner "~/.emacs.d/lisp/img/emacs.png")
 
 ;; Content is not centered by default. To center, set
 (setq dashboard-center-content t)

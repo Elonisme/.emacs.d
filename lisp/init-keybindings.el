@@ -18,6 +18,6 @@
 (global-set-key (kbd "C-x b") 'consult-buffer);;在buffer里面提供历史文件选项
 
 ;;重启emacs快捷键配置
-(global-set-key (kbd "C-c C-e") 'restart-emacs)
+(global-set-key (kbd "C-c C-p") 'restart-emacs)
 
 (provide 'init-keybindings)

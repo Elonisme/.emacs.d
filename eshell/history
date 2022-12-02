@@ -24,3 +24,4 @@ rm -rf netease-cloud-music/
 ls
 git add .
 git commit -m "transform init.el to init-xxx.el"
+chello.exe 

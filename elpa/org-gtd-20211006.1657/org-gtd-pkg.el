@@ -1,0 +1,2 @@
+;;; Generated package description from org-gtd.el  -*- no-byte-compile: t -*-
+(define-package #("org-gtd" 0 7 (face nil)) "20211006.1657" "An implementation of GTD" '((emacs "26.1") (org-edna "1.1.2") (f "0.20.0") (org "9.3.1") (org-agenda-property "1.3.1")) :commit "95d903d346882b037c5ea53495884daff48184f1" :authors '(("Aldric Giacomoni" . "trevoke@gmail.com")) :maintainer '("Aldric Giacomoni" . "trevoke@gmail.com") :url "https://github.com/Trevoke/org-gtd.el")
