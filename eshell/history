@@ -25,3 +25,7 @@ ls
 git add .
 git commit -m "transform init.el to init-xxx.el"
 chello.exe 
+ls
+mkdir Verilog_Source
+ls
+cd Verilog_Source/

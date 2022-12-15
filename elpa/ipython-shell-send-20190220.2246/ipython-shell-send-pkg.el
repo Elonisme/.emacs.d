@@ -1,0 +1,2 @@
+;;; Generated package description from ipython-shell-send.el  -*- no-byte-compile: t -*-
+(define-package #("ipython-shell-send" 0 18 (face nil)) "20190220.2246" "Send code (including magics) to ipython shell" '((emacs "24")) :commit "0faed86faff02a361f23ce5fc923d0e9b09bb2da" :authors '(("Jack Kamm" . "jackkamm@gmail.com")) :maintainer '("Jack Kamm" . "jackkamm@gmail.com") :keywords '("tools" "processes") :url "https://github.com/jackkamm/ipython-shell-send-el")
