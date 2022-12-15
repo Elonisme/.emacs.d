@@ -1,5 +1,7 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("c:/Users/41630/AppData/Roaming/.emacs.d/init.el" . 903)
+(("c:/Users/41630/AppData/Roaming/.emacs.d/close_proxy.sh" . 80)
+ ("c:/Users/41630/AppData/Roaming/.emacs.d/open_proxy.sh" . 108)
+ ("c:/Users/41630/AppData/Roaming/.emacs.d/init.el" . 903)
  ("d:/DATA/Academic/Beamer/latex_beamer.tex" . 2152)
  ("d:/DATA/Academic/SpectacleJs/jsppt.org" . 456)
  ("d:/DATA/Academic/Beamer/sample-beamer.org" . 692)
